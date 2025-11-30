@@ -116,10 +116,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 in your area. Free quotes, no obligation.
               </p>
             </div>
-            <LeadForm
-              headline="Get Your Free Quote"
-              subheadline="Fill out the form below and we'll match you with local pros"
-            />
+            <LeadForm />
           </section>
 
           {/* Back to Blog */}
