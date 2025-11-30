@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     "landscaping maintenance",
     "free quotes",
   ],
+  icons: {
+    icon: "/YMQ2.png",
+    apple: "/YMQ2.png",
+  },
   openGraph: {
     title: "Yard Maintenance Quotes | Fast, Free Quotes from Local Pros",
     description:
