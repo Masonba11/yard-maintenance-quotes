@@ -3,6 +3,8 @@ import Link from "next/link";
 import { getBlogPostBySlug, getAllBlogPosts } from "@/src/data/blog";
 import LeadForm from "@/src/components/LeadForm";
 import type { Metadata } from "next";
+import { services } from "@/src/data/services";
+import { locations } from "@/src/data/locations";
 
 interface BlogPostPageProps {
   params: {
@@ -39,12 +41,33 @@ export async function generateMetadata({
   };
 }
 
+// Map blog categories to state slugs
+const categoryToStateSlug: Record<string, string> = {
+  "Arizona Yard Care": "arizona",
+  "Oklahoma Yard Care": "oklahoma",
+  "Tennessee Yard Care": "tennessee",
+  "South Carolina Yard Care": "south-carolina",
+  "Texas Yard Care": "texas",
+  "Florida Yard Care": "florida",
+  "Arkansas Yard Care": "arkansas",
+  "Idaho Yard Care": "idaho",
+  "New Mexico Yard Care": "new-mexico",
+};
+
 export default function BlogPostPage({ params }: BlogPostPageProps) {
   const post = getBlogPostBySlug(params.slug);
 
   if (!post) {
     notFound();
   }
+
+  // Get relevant locations for this blog post's state
+  const stateSlug = categoryToStateSlug[post.category];
+  const relevantLocations = stateSlug
+    ? locations.filter(
+        (loc) => loc.stateSlug === stateSlug && loc.isPrimary
+      )
+    : [];
 
   return (
     <div className="min-h-screen bg-white">
@@ -119,6 +142,120 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             prose-headings:first:mt-0"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+
+          {/* Services Cross-Link Section */}
+          <section className="bg-white rounded-2xl p-8 md:p-12 mb-12 border border-gray-200">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Yard Maintenance Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Explore our comprehensive yard maintenance services available in
+                your area
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map((service) => (
+                <Link
+                  key={service.id}
+                  href={`/services/${service.id}`}
+                  className="bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all transform hover:-translate-y-1 group"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary-600 to-primary-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <svg
+                      className="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                    {service.name}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {service.shortDescription}
+                  </p>
+                </Link>
+              ))}
+            </div>
+            <div className="text-center mt-8">
+              <Link
+                href="/services"
+                className="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors group"
+              >
+                View All Services
+                <svg
+                  className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </Link>
+            </div>
+          </section>
+
+          {/* Locations Cross-Link Section */}
+          {relevantLocations.length > 0 && (
+            <section className="bg-gradient-to-br from-primary-50 to-white rounded-2xl p-8 md:p-12 mb-12 border border-primary-100">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Service Areas
+                </h2>
+                <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                  Get yard maintenance quotes in these {relevantLocations[0]?.state} cities
+                </p>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {relevantLocations.map((location) => (
+                  <Link
+                    key={`${location.stateSlug}-${location.citySlug}`}
+                    href={`/locations/${location.stateSlug}/${location.citySlug}`}
+                    className="bg-white p-6 rounded-xl border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all transform hover:-translate-y-1 text-center group"
+                  >
+                    <div className="font-bold text-gray-900 mb-1 text-lg group-hover:text-primary-600 transition-colors">
+                      {location.city}
+                    </div>
+                    <div className="text-sm text-gray-600">{location.state}</div>
+                  </Link>
+                ))}
+              </div>
+              <div className="text-center mt-8">
+                <Link
+                  href="/locations"
+                  className="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors group"
+                >
+                  View All Service Areas
+                  <svg
+                    className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            </section>
+          )}
 
           {/* CTA Section */}
           <section
