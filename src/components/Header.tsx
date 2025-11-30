@@ -9,6 +9,9 @@ import { services } from "@/src/data/services";
 export default function Header() {
   const [isServiceAreasOpen, setIsServiceAreasOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isMobileServiceAreasOpen, setIsMobileServiceAreasOpen] = useState(false);
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50 backdrop-blur-sm bg-white/95">
@@ -24,6 +27,45 @@ export default function Header() {
               priority
             />
           </Link>
+          
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2 text-gray-700 hover:text-primary-600 transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
+          </button>
+
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             <div
               className="relative group"
@@ -163,6 +205,159 @@ export default function Header() {
               Get Quote
             </Link>
           </div>
+
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg md:hidden z-50 max-h-[calc(100vh-100px)] overflow-y-auto">
+              <div className="container mx-auto px-4 py-4 space-y-2">
+                {/* Services Dropdown */}
+                <div>
+                  <button
+                    onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                    className="w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:text-primary-600 transition-colors font-medium text-left"
+                  >
+                    <span>Services</span>
+                    <svg
+                      className={`w-5 h-5 transition-transform ${
+                        isMobileServicesOpen ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  {isMobileServicesOpen && (
+                    <div className="pl-4 space-y-1">
+                      {services.map((service) => (
+                        <Link
+                          key={service.id}
+                          href={`/services/${service.id}`}
+                          className="block px-4 py-2 text-sm text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded-md transition-colors"
+                          onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            setIsMobileServicesOpen(false);
+                          }}
+                        >
+                          <div className="font-medium">{service.name}</div>
+                          <div className="text-xs text-gray-500 mt-0.5">
+                            {service.shortDescription}
+                          </div>
+                        </Link>
+                      ))}
+                      <Link
+                        href="/services"
+                        className="block px-4 py-2 text-sm font-semibold text-primary-600 hover:bg-primary-50 rounded-md transition-colors"
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          setIsMobileServicesOpen(false);
+                        }}
+                      >
+                        View All Services →
+                      </Link>
+                    </div>
+                  )}
+                </div>
+
+                {/* Service Areas Dropdown */}
+                <div>
+                  <button
+                    onClick={() =>
+                      setIsMobileServiceAreasOpen(!isMobileServiceAreasOpen)
+                    }
+                    className="w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:text-primary-600 transition-colors font-medium text-left"
+                  >
+                    <span>Service Areas</span>
+                    <svg
+                      className={`w-5 h-5 transition-transform ${
+                        isMobileServiceAreasOpen ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  {isMobileServiceAreasOpen && (
+                    <div className="pl-4 space-y-1">
+                      {primaryLocations.map((location) => (
+                        <Link
+                          key={`${location.stateSlug}-${location.citySlug}`}
+                          href={`/locations/${location.stateSlug}/${location.citySlug}`}
+                          className="block px-4 py-2 text-sm text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded-md transition-colors"
+                          onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            setIsMobileServiceAreasOpen(false);
+                          }}
+                        >
+                          {location.city}, {location.state}
+                        </Link>
+                      ))}
+                      <Link
+                        href="/locations"
+                        className="block px-4 py-2 text-sm font-semibold text-primary-600 hover:bg-primary-50 rounded-md transition-colors"
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          setIsMobileServiceAreasOpen(false);
+                        }}
+                      >
+                        View All Locations →
+                      </Link>
+                    </div>
+                  )}
+                </div>
+
+                {/* Other Links */}
+                <Link
+                  href="/how-it-works"
+                  className="block px-4 py-3 text-gray-700 hover:text-primary-600 transition-colors font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  How It Works
+                </Link>
+                <Link
+                  href="/blog"
+                  className="block px-4 py-3 text-gray-700 hover:text-primary-600 transition-colors font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Blog
+                </Link>
+                <Link
+                  href="/faq"
+                  className="block px-4 py-3 text-gray-700 hover:text-primary-600 transition-colors font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  FAQ
+                </Link>
+                <Link
+                  href="/contact"
+                  className="block px-4 py-3 text-gray-700 hover:text-primary-600 transition-colors font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+                <Link
+                  href="#quote-form"
+                  className="block px-4 py-3 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-semibold rounded-lg transition-all text-center mt-4"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Get Quote
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </nav>
