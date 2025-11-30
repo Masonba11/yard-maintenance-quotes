@@ -74,7 +74,9 @@ export async function generateMetadata({
   }
 
   const title = `${service.name} in ${location.displayName} | Free Quotes`;
-  const description = `Get fast, free ${service.name.toLowerCase()} quotes in ${location.displayName}. Connect with pre-screened local professionals for ${service.name.toLowerCase()} services.`;
+  const description = `Get fast, free ${service.name.toLowerCase()} quotes in ${
+    location.displayName
+  }. Connect with pre-screened local professionals for ${service.name.toLowerCase()} services.`;
 
   return {
     title,
@@ -130,7 +132,9 @@ export default function LocationServicePage({
 
       <Hero
         headline={`${service.name} in ${location.city}, ${location.state}`}
-        subheadline={`Get matched with local ${service.name.toLowerCase()} professionals in ${location.displayName}. Free quotes, no obligation.`}
+        subheadline={`Get matched with local ${service.name.toLowerCase()} professionals in ${
+          location.displayName
+        }. Free quotes, no obligation.`}
       />
 
       <section className="py-16 md:py-24 bg-white">
@@ -200,8 +204,8 @@ export default function LocationServicePage({
                     throughout the year
                   </li>
                   <li>
-                    Knowledge of {location.metroArea} area regulations,
-                    disposal requirements, and local best practices
+                    Knowledge of {location.metroArea} area regulations, disposal
+                    requirements, and local best practices
                   </li>
                 </ul>
               </div>
@@ -221,10 +225,10 @@ export default function LocationServicePage({
                 <p className="text-gray-700 leading-relaxed">
                   These local professionals have experience working in the{" "}
                   {location.metroArea} area and can provide{" "}
-                  {service.name.toLowerCase()} that's specifically suited to your
-                  location. They understand common challenges in {location.state}{" "}
-                  and can recommend approaches that work best for{" "}
-                  {location.displayName} conditions.
+                  {service.name.toLowerCase()} that's specifically suited to
+                  your location. They understand common challenges in{" "}
+                  {location.state} and can recommend approaches that work best
+                  for {location.displayName} conditions.
                 </p>
               </div>
             </div>
@@ -442,4 +446,3 @@ export default function LocationServicePage({
     </>
   );
 }
-

@@ -244,27 +244,62 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             <section className="bg-gradient-to-br from-primary-50 to-white rounded-2xl p-8 md:p-12 mb-12 border border-primary-100">
               <div className="text-center mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Service Areas
+                  Service Areas & Services
                 </h2>
                 <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                   Get yard maintenance quotes in these{" "}
                   {relevantLocations[0]?.state} cities
                 </p>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div className="space-y-6">
                 {relevantLocations.map((location) => (
-                  <Link
+                  <div
                     key={`${location.stateSlug}-${location.citySlug}`}
-                    href={`/locations/${location.stateSlug}/${location.citySlug}`}
-                    className="bg-white p-6 rounded-xl border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all transform hover:-translate-y-1 text-center group"
+                    className="bg-white p-6 rounded-xl border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all"
                   >
-                    <div className="font-bold text-gray-900 mb-1 text-lg group-hover:text-primary-600 transition-colors">
-                      {location.city}
+                    <div className="mb-4">
+                      <Link
+                        href={`/locations/${location.stateSlug}/${location.citySlug}`}
+                        className="inline-block"
+                      >
+                        <h3 className="text-2xl font-bold text-gray-900 hover:text-primary-600 transition-colors mb-1">
+                          {location.city}, {location.state}
+                        </h3>
+                      </Link>
+                      <Link
+                        href={`/locations/${location.stateSlug}/${location.citySlug}`}
+                        className="text-primary-600 hover:text-primary-700 text-sm font-medium inline-flex items-center gap-1"
+                      >
+                        View all services
+                        <svg
+                          className="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </Link>
                     </div>
-                    <div className="text-sm text-gray-600">
-                      {location.state}
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                      {services
+                        .filter((s) => s.id !== "yard-maintenance")
+                        .map((service) => (
+                          <Link
+                            key={service.id}
+                            href={`/locations/${location.stateSlug}/${location.citySlug}/${service.id}`}
+                            className="text-sm text-primary-600 hover:text-primary-700 hover:underline font-medium py-2 px-3 rounded-md hover:bg-primary-50 transition-colors"
+                          >
+                            {service.name}
+                          </Link>
+                        ))}
                     </div>
-                  </Link>
+                  </div>
                 ))}
               </div>
               <div className="text-center mt-8">
