@@ -48,45 +48,63 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <div className="min-h-screen bg-white">
+      <section className="relative bg-gradient-to-br from-primary-50 to-primary-100 py-16 md:py-24 overflow-hidden">
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="/YMQhero.mp4" type="video/mp4" />
+        </video>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/40 z-[1]"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto">
+            {/* Breadcrumb */}
+            <nav className="mb-6" aria-label="Breadcrumb">
+              <ol className="flex items-center space-x-2 text-sm text-white/80">
+                <li>
+                  <Link
+                    href="/"
+                    className="hover:text-white transition-colors"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <span className="mx-2">/</span>
+                </li>
+                <li>
+                  <Link
+                    href="/blog"
+                    className="hover:text-white transition-colors"
+                  >
+                    Blog
+                  </Link>
+                </li>
+              </ol>
+            </nav>
+
+            {/* Header */}
+            <header className="mb-12">
+              <div className="mb-6">
+                <span className="inline-block px-4 py-1.5 bg-primary-100/90 text-primary-700 text-sm font-medium rounded-md">
+                  {post.category}
+                </span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
+                {post.title}
+              </h1>
+            </header>
+          </div>
+        </div>
+      </section>
+
       <article className="container mx-auto px-4 py-16 md:py-20">
         <div className="max-w-3xl mx-auto">
-          {/* Breadcrumb */}
-          <nav className="mb-6" aria-label="Breadcrumb">
-            <ol className="flex items-center space-x-2 text-sm text-gray-500">
-              <li>
-                <Link
-                  href="/"
-                  className="hover:text-primary-600 transition-colors"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <span className="mx-2">/</span>
-              </li>
-              <li>
-                <Link
-                  href="/blog"
-                  className="hover:text-primary-600 transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
-            </ol>
-          </nav>
-
-          {/* Header */}
-          <header className="mb-12">
-            <div className="mb-6">
-              <span className="inline-block px-4 py-1.5 bg-primary-50 text-primary-700 text-sm font-medium rounded-md">
-                {post.category}
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight">
-              {post.title}
-            </h1>
-          </header>
-
           {/* Content */}
           <div
             className="prose prose-lg prose-slate max-w-none
