@@ -100,7 +100,10 @@ export default function LeadForm({
         from_name: "Yard Maintenance Quotes",
       };
 
-      console.log("Submitting form data:", { ...submissionData, access_key: "***" });
+      console.log("Submitting form data:", {
+        ...submissionData,
+        access_key: "***",
+      });
 
       const response = await fetch(WEB3FORMS_ENDPOINT, {
         method: "POST",
@@ -151,7 +154,8 @@ export default function LeadForm({
       } else {
         setSubmitStatus("error");
         setErrorMessage(
-          result.message || "Something went wrong. Please try again or call us directly."
+          result.message ||
+            "Something went wrong. Please try again or call us directly."
         );
         console.error("Form submission failed:", result);
       }

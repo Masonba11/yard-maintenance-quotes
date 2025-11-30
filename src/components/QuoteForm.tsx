@@ -83,7 +83,9 @@ export default function QuoteForm({
     try {
       const submitData = {
         access_key: WEB3FORMS_ACCESS_KEY,
-        subject: `Yard Maintenance Quote Request - ${formData.service}${stateName ? ` in ${cityName}, ${stateName}` : ""}`,
+        subject: `Yard Maintenance Quote Request - ${formData.service}${
+          stateName ? ` in ${cityName}, ${stateName}` : ""
+        }`,
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
@@ -94,7 +96,10 @@ export default function QuoteForm({
         from_name: "Yard Maintenance Quotes",
       };
 
-      console.log("Submitting form data:", { ...submitData, access_key: "***" });
+      console.log("Submitting form data:", {
+        ...submitData,
+        access_key: "***",
+      });
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
