@@ -82,7 +82,7 @@ export default function LocationPage({ params }: LocationPageProps) {
   // Get geo coordinates
   const geo = GEO[location.stateSlug]?.[location.citySlug];
   const stateAbbr = STATE_ABBREVIATIONS[location.stateSlug] || "";
-  const pageUrl = `https://yardmaintenancequotes.com/locations/${location.stateSlug}/${location.citySlug}`;
+  const pageUrl = `https://yardmaintenancequote.com/locations/${location.stateSlug}/${location.citySlug}`;
   const serviceNames = services.map((s) => s.name);
 
   return (

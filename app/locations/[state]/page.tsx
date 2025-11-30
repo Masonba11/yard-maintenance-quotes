@@ -102,7 +102,7 @@ export default function StatePage({ params }: StatePageProps) {
   const locationForGeo = primaryLocation || stateLocations[0];
   const geo = GEO[params.state]?.[locationForGeo.citySlug];
 
-  const pageUrl = `https://yardmaintenancequotes.com/locations/${params.state}`;
+  const pageUrl = `https://yardmaintenancequote.com/locations/${params.state}`;
   const serviceNames = services.map((s) => s.name);
 
   return (

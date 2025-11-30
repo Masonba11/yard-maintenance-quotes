@@ -4,7 +4,7 @@ import { services } from "@/src/data/services";
 import { getAllBlogPosts } from "@/src/data/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://yardmaintenancequotes.com";
+  const baseUrl = "https://yardmaintenancequote.com";
   const now = new Date().toISOString();
 
   // 1. Homepage → priority 1.0, weekly

@@ -110,7 +110,7 @@ export default function LocationServicePage({
   // Get geo coordinates
   const geo = GEO[location.stateSlug]?.[location.citySlug];
   const stateAbbr = STATE_ABBREVIATIONS[location.stateSlug] || "";
-  const pageUrl = `https://yardmaintenancequotes.com/locations/${location.stateSlug}/${location.citySlug}/${service.id}`;
+  const pageUrl = `https://yardmaintenancequote.com/locations/${location.stateSlug}/${location.citySlug}/${service.id}`;
   const serviceNames = [service.name];
 
   return (

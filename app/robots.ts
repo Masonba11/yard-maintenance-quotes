@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       disallow: "/api/",
       crawlDelay: 1,
     },
-    sitemap: "https://yardmaintenancequotes.com/sitemap.xml",
+    sitemap: "https://yardmaintenancequote.com/sitemap.xml",
   };
 }

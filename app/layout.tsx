@@ -44,13 +44,13 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Yard Maintenance Quotes",
-              url: "https://yardmaintenancequotes.com",
+              url: "https://yardmaintenancequote.com",
               description:
                 "Connect with local yard maintenance professionals for free quotes.",
               potentialAction: {
                 "@type": "SearchAction",
                 target:
-                  "https://yardmaintenancequotes.com/locations?q={search_term_string}",
+                  "https://yardmaintenancequote.com/locations?q={search_term_string}",
                 "query-input": "required name=search_term_string",
               },
             }),
@@ -63,7 +63,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Yard Maintenance Quotes",
-              url: "https://yardmaintenancequotes.com",
+              url: "https://yardmaintenancequote.com",
               description:
                 "A lead generation service connecting homeowners with local yard maintenance professionals.",
               sameAs: [],

@@ -83,7 +83,7 @@ export const GEO: Record<
   },
 };
 
-const BASE_URL = "https://yardmaintenancequotes.com";
+const BASE_URL = "https://yardmaintenancequote.com";
 
 // Service types available
 export const SERVICE_TYPES = [

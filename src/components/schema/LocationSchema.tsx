@@ -77,7 +77,7 @@ const LocationSchema: React.FC<Props> = ({
     provider: {
       "@type": "Organization",
       name: "Yard Maintenance Quotes",
-      url: "https://yardmaintenancequotes.com",
+      url: "https://yardmaintenancequote.com",
     },
     areaServed: {
       "@type": "Place",
@@ -100,13 +100,13 @@ const LocationSchema: React.FC<Props> = ({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://yardmaintenancequotes.com/",
+        item: "https://yardmaintenancequote.com/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: stateName,
-        item: `https://yardmaintenancequotes.com/locations/${stateSlug}`,
+        item: `https://yardmaintenancequote.com/locations/${stateSlug}`,
       },
       {
         "@type": "ListItem",
