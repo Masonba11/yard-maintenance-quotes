@@ -3,12 +3,13 @@ import { getLocationBySlugs, getLocationsByMetro } from "@/src/data/locations";
 import { services } from "@/src/data/services";
 import Hero from "@/src/components/Hero";
 import LeadForm from "@/src/components/LeadForm";
-import FAQ from "@/src/components/FAQ";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { generateLocationContent } from "@/src/utils/contentGenerator";
 import { generateLocationFAQs } from "@/src/utils/faqGenerator";
 import { getAllBlogPosts } from "@/src/data/blog";
+import LocationSchema from "@/src/components/schema/LocationSchema";
+import { GEO } from "@/src/utils/structuredData";
 
 interface LocationPageProps {
   params: {
@@ -52,6 +53,19 @@ export async function generateMetadata({
   };
 }
 
+// State abbreviation mapping
+const STATE_ABBREVIATIONS: Record<string, string> = {
+  arizona: "AZ",
+  oklahoma: "OK",
+  florida: "FL",
+  tennessee: "TN",
+  "south-carolina": "SC",
+  arkansas: "AR",
+  idaho: "ID",
+  texas: "TX",
+  "new-mexico": "NM",
+};
+
 export default function LocationPage({ params }: LocationPageProps) {
   const location = getLocationBySlugs(params.state, params.city);
   const metroLocations = location
@@ -65,8 +79,28 @@ export default function LocationPage({ params }: LocationPageProps) {
   // Generate location-specific content
   const locationServices = services.slice(0, 5); // Show top 5 services
 
+  // Get geo coordinates
+  const geo = GEO[location.stateSlug]?.[location.citySlug];
+  const stateAbbr = STATE_ABBREVIATIONS[location.stateSlug] || "";
+  const pageUrl = `https://yardmaintenancequotes.com/locations/${location.stateSlug}/${location.citySlug}`;
+  const serviceNames = services.map((s) => s.name);
+
   return (
     <>
+      {/* Location Schema - Place, Service, BreadcrumbList */}
+      {geo && (
+        <LocationSchema
+          stateSlug={location.stateSlug}
+          stateName={location.state}
+          stateAbbr={stateAbbr}
+          citySlug={location.citySlug}
+          cityName={location.city}
+          services={serviceNames}
+          lat={geo.lat}
+          lon={geo.lon}
+          pageUrl={pageUrl}
+        />
+      )}
       <Hero
         headline={`Fast Yard Maintenance Quotes in ${location.city}, ${location.state}`}
         subheadline={`Get matched with pre-screened yard maintenance professionals in ${location.displayName}. Free quotes, no obligation.`}
@@ -375,11 +409,49 @@ export default function LocationPage({ params }: LocationPageProps) {
         </section>
       )}
 
-      <FAQ
-        items={generateLocationFAQs(location)}
-        title={`Frequently Asked Questions About Yard Maintenance in ${location.displayName}`}
-        description={`Common questions about getting yard maintenance quotes in ${location.city}, ${location.state}`}
-      />
+      {/* FAQ section without FAQPage schema - we only want Place/Service/BreadcrumbList on location pages */}
+      <section className="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+              <span className="bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent">
+                Frequently Asked Questions About Yard Maintenance in{" "}
+                {location.displayName}
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Common questions about getting yard maintenance quotes in{" "}
+              {location.city}, {location.state}
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-4">
+              {generateLocationFAQs(location).map((item, index) => (
+                <div
+                  key={index}
+                  className="border border-gray-200 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all bg-white"
+                >
+                  <details className="group">
+                    <summary className="w-full px-6 py-5 text-left flex justify-between items-center bg-gradient-to-r from-gray-50 to-white hover:from-primary-50 hover:to-white transition-all cursor-pointer list-none">
+                      <span className="font-bold text-gray-900 pr-4 text-lg">
+                        {item.question}
+                      </span>
+                      <span className="text-primary-600 text-2xl flex-shrink-0 font-light">
+                        <span className="group-open:hidden">+</span>
+                        <span className="group-open:inline hidden">−</span>
+                      </span>
+                    </summary>
+                    <div className="px-6 py-5 bg-white text-gray-700 leading-relaxed border-t border-gray-100">
+                      {item.answer}
+                    </div>
+                  </details>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

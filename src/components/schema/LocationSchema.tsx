@@ -24,19 +24,38 @@ const LocationSchema: React.FC<Props> = ({
   pageUrl,
 }) => {
   // Place Schema
+  // If cityName === stateName, this is a state-level page, so just use stateName
+  const isStateLevel = cityName === stateName;
+  const placeName = isStateLevel
+    ? `Yard Maintenance Quotes – ${stateName}`
+    : `Yard Maintenance Quotes – ${cityName}, ${stateName}`;
+  const placeDescription = isStateLevel
+    ? `Get free yard maintenance quotes across ${stateName}. Connect with pre-screened local professionals for lawn care, yard cleanup, and landscaping services throughout ${stateName}.`
+    : `Get free yard maintenance quotes in ${cityName}, ${stateName}. Connect with pre-screened local professionals for lawn care, yard cleanup, and landscaping services.`;
+
+  const addressJson: {
+    "@type": string;
+    addressLocality?: string;
+    addressRegion: string;
+    addressCountry: string;
+  } = {
+    "@type": "PostalAddress",
+    addressRegion: stateAbbr,
+    addressCountry: "US",
+  };
+
+  if (!isStateLevel) {
+    addressJson.addressLocality = cityName;
+  }
+
   const placeJson = {
     "@context": "https://schema.org",
     "@type": "Place",
     "@id": `${pageUrl}#place`,
-    name: `Yard Maintenance Quotes – ${cityName}, ${stateName}`,
-    description: `Get free yard maintenance quotes in ${cityName}, ${stateName}. Connect with pre-screened local professionals for lawn care, yard cleanup, and landscaping services.`,
+    name: placeName,
+    description: placeDescription,
     url: pageUrl,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: cityName,
-      addressRegion: stateAbbr,
-      addressCountry: "US",
-    },
+    address: addressJson,
     geo: {
       "@type": "GeoCoordinates",
       latitude: lat,
@@ -45,10 +64,15 @@ const LocationSchema: React.FC<Props> = ({
   };
 
   // Service Schema
+  const serviceName = isStateLevel
+    ? `Yard Maintenance in ${stateName}`
+    : `Yard Maintenance in ${cityName}, ${stateName}`;
+  const areaServedName = isStateLevel ? stateName : `${cityName}, ${stateName}`;
+
   const serviceJson = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: `Yard Maintenance in ${cityName}, ${stateName}`,
+    name: serviceName,
     serviceType: services.join(", "),
     provider: {
       "@type": "Organization",
@@ -57,7 +81,7 @@ const LocationSchema: React.FC<Props> = ({
     },
     areaServed: {
       "@type": "Place",
-      name: `${cityName}, ${stateName}`,
+      name: areaServedName,
       geo: {
         "@type": "GeoCoordinates",
         latitude: lat,
