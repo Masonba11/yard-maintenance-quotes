@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, FormEvent } from "react";
+import { useRouter } from "next/navigation";
 
 interface QuoteFormProps {
   stateName?: string;
@@ -25,6 +26,7 @@ export default function QuoteForm({
   cityName = "",
   serviceName = "",
 }: QuoteFormProps) {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -116,17 +118,8 @@ export default function QuoteForm({
       console.log("Response data:", result);
 
       if (result.success) {
-        setSubmitStatus("success");
-        // Clear form
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          service: serviceName || "",
-          message: "",
-        });
-        // Scroll to top to show success message
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        // Redirect to thank you page
+        router.push("/thank-you");
       } else {
         setSubmitStatus("error");
         setErrorMessage(
@@ -179,30 +172,6 @@ export default function QuoteForm({
         defaultChecked={false}
       />
 
-      {/* Success Message */}
-      {submitStatus === "success" && (
-        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-          <div className="flex items-center gap-2">
-            <svg
-              className="w-5 h-5 text-green-600"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
-            <p className="text-green-800 font-medium">
-              Thank you! Your quote request has been submitted successfully.
-              We&apos;ll contact you shortly.
-            </p>
-          </div>
-        </div>
-      )}
 
       {/* Error Message */}
       {submitStatus === "error" && errorMessage && (

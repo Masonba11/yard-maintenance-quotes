@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, FormEvent } from "react";
+import { useRouter } from "next/navigation";
 import { Location } from "@/src/data/locations";
 import { services } from "@/src/data/services";
 
@@ -21,6 +22,7 @@ export default function LeadForm({
   serviceContext,
   className = "",
 }: LeadFormProps) {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -120,8 +122,6 @@ export default function LeadForm({
       console.log("Response data:", result);
 
       if (result.success) {
-        setSubmitStatus("success");
-
         // TODO: Add CRM webhook call here
         // Example: await fetch(CRM_WEBHOOK_URL, { method: 'POST', body: JSON.stringify(submissionData) });
         // Route based on city/service: if (citySlug === 'tucson' && serviceType === 'lawn-mowing') { ... }
@@ -136,21 +136,8 @@ export default function LeadForm({
         //   });
         // }
 
-        // Reset form
-        setFormData({
-          name: "",
-          phone: "",
-          email: "",
-          address: "",
-          zipCode: "",
-          serviceType: serviceContext || "",
-          message: "",
-        });
-
-        // Optional: Redirect to thank you page after a delay
-        // setTimeout(() => {
-        //   window.location.href = '/thank-you';
-        // }, 2000);
+        // Redirect to thank you page
+        router.push("/thank-you");
       } else {
         setSubmitStatus("error");
         setErrorMessage(
@@ -173,20 +160,6 @@ export default function LeadForm({
     }
   };
 
-  if (submitStatus === "success") {
-    return (
-      <div
-        className={`bg-green-50 border-2 border-green-500 rounded-lg p-8 text-center ${className}`}
-      >
-        <div className="text-green-600 text-4xl mb-4">✓</div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
-        <p className="text-gray-700">
-          We have received your request. A local yard maintenance professional
-          will contact you shortly with a free quote.
-        </p>
-      </div>
-    );
-  }
 
   return (
     <form
