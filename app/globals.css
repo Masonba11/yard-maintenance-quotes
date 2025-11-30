@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #16a34a;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #15803d;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll offset for anchor links to account for sticky header */
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+/* Modern blog post styling */
+.prose {
+  word-spacing: normal;
+  letter-spacing: -0.01em;
+  word-break: normal;
+  color: #334155;
+}
+
+.prose p {
+  word-spacing: normal !important;
+  letter-spacing: -0.01em !important;
+  word-break: normal !important;
+  white-space: normal !important;
+  margin-bottom: 1.5rem !important;
+  line-height: 1.8 !important;
+  font-size: 1.125rem !important;
+}
+
+.prose p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.prose ul,
+.prose ol {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  padding-left: 0 !important;
+  list-style: none !important;
+}
+
+.prose ul li {
+  position: relative;
+  padding-left: 1.75rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+  line-height: 1.8 !important;
+  word-spacing: normal !important;
+}
+
+.prose ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #16a34a;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.prose ol {
+  counter-reset: list-counter;
+  list-style: none !important;
+}
+
+.prose ol li {
+  position: relative;
+  padding-left: 2rem !important;
+  counter-increment: list-counter;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+  line-height: 1.8 !important;
+}
+
+.prose ol li::before {
+  content: counter(list-counter) ".";
+  position: absolute;
+  left: 0;
+  color: #16a34a;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.prose h2 {
+  margin-top: 3.5rem !important;
+  margin-bottom: 1.25rem !important;
+  padding-top: 2.5rem !important;
+  border-top: 1px solid #e2e8f0 !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.prose h2:first-of-type {
+  border-top: none !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.prose h3 {
+  margin-top: 2.5rem !important;
+  margin-bottom: 1rem !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.prose h2 + p,
+.prose h3 + p {
+  margin-top: 1rem !important;
+}
+
+.prose h2 + h3 {
+  margin-top: 2rem !important;
+}
+
+.prose strong {
+  font-weight: 600 !important;
+  color: #0f172a !important;
+}
