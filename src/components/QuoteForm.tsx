@@ -83,24 +83,32 @@ export default function QuoteForm({
     try {
       const submitData = {
         access_key: WEB3FORMS_ACCESS_KEY,
+        subject: `Yard Maintenance Quote Request - ${formData.service}${stateName ? ` in ${cityName}, ${stateName}` : ""}`,
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
         service: formData.service,
-        state: stateName,
-        city: cityName,
+        state: stateName || "",
+        city: cityName || "",
         message: formData.message || "",
+        from_name: "Yard Maintenance Quotes",
       };
+
+      console.log("Submitting form data:", { ...submitData, access_key: "***" });
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify(submitData),
       });
 
+      console.log("Response status:", response.status);
+
       const result = await response.json();
+      console.log("Response data:", result);
 
       if (result.success) {
         setSubmitStatus("success");
@@ -119,11 +127,15 @@ export default function QuoteForm({
         setErrorMessage(
           result.message || "Something went wrong. Please try again."
         );
+        console.error("Form submission error:", result);
       }
     } catch (error) {
+      console.error("Form submission exception:", error);
       setSubmitStatus("error");
       setErrorMessage(
-        "Network error. Please check your connection and try again."
+        error instanceof Error
+          ? `Error: ${error.message}`
+          : "Network error. Please check your connection and try again."
       );
     } finally {
       setIsSubmitting(false);
@@ -159,6 +171,7 @@ export default function QuoteForm({
         style={{ display: "none" }}
         tabIndex={-1}
         autoComplete="off"
+        defaultChecked={false}
       />
 
       {/* Success Message */}

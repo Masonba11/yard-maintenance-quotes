@@ -73,10 +73,7 @@ export default function LeadForm({
     setIsSubmitting(true);
 
     try {
-      // TODO: Replace with your Web3Forms API endpoint
-      // Get your access key from https://web3forms.com
-      const WEB3FORMS_ACCESS_KEY =
-        process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE";
+      const WEB3FORMS_ACCESS_KEY = "e26bbf73-c42c-459e-b792-de51a4d328b2";
       const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
       const leadSource =
@@ -90,17 +87,20 @@ export default function LeadForm({
         name: formData.name,
         phone: formData.phone,
         email: formData.email,
-        address: formData.address,
-        zip_code: formData.zipCode,
-        service_type: formData.serviceType,
-        message: formData.message,
+        address: formData.address || "",
+        zip_code: formData.zipCode || "",
+        service_type: formData.serviceType || "",
+        message: formData.message || "",
         city: city || "",
         state: state || "",
         city_slug: citySlug || "",
         state_slug: stateSlug || "",
         lead_source: leadSource,
         page_url: typeof window !== "undefined" ? window.location.href : "",
+        from_name: "Yard Maintenance Quotes",
       };
+
+      console.log("Submitting form data:", { ...submissionData, access_key: "***" });
 
       const response = await fetch(WEB3FORMS_ENDPOINT, {
         method: "POST",
@@ -111,7 +111,10 @@ export default function LeadForm({
         body: JSON.stringify(submissionData),
       });
 
+      console.log("Response status:", response.status);
+
       const result = await response.json();
+      console.log("Response data:", result);
 
       if (result.success) {
         setSubmitStatus("success");
@@ -148,12 +151,18 @@ export default function LeadForm({
       } else {
         setSubmitStatus("error");
         setErrorMessage(
-          "Something went wrong. Please try again or call us directly."
+          result.message || "Something went wrong. Please try again or call us directly."
         );
+        console.error("Form submission failed:", result);
       }
     } catch (error) {
       console.error("Form submission error:", error);
       setSubmitStatus("error");
+      setErrorMessage(
+        error instanceof Error
+          ? `Error: ${error.message}`
+          : "Network error. Please check your connection and try again."
+      );
       setErrorMessage("Network error. Please try again or call us directly.");
     } finally {
       setIsSubmitting(false);
@@ -180,6 +189,17 @@ export default function LeadForm({
       onSubmit={handleSubmit}
       className={`bg-white rounded-2xl shadow-2xl p-8 md:p-10 border border-gray-100 ${className}`}
     >
+      {/* Honeypot field - hidden from users */}
+      <input
+        type="checkbox"
+        name="botcheck"
+        className="hidden"
+        style={{ display: "none" }}
+        tabIndex={-1}
+        autoComplete="off"
+        defaultChecked={false}
+      />
+
       <div className="mb-8 text-center">
         <h3 className="text-3xl font-bold text-gray-900 mb-2">
           Get Your Free Quote
