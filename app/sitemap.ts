@@ -5,12 +5,13 @@ import { getAllBlogPosts } from "@/src/data/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://yardmaintenancequotes.com";
+  const now = new Date().toISOString();
 
-  // 1. Homepage → priority 1.0
+  // 1. Homepage → priority 1.0, weekly
   const homepage: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "weekly",
       priority: 1.0,
     },
@@ -22,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
   const statePages: MetadataRoute.Sitemap = uniqueStates.map((stateSlug) => ({
     url: `${baseUrl}/locations/${stateSlug}`,
-    lastModified: new Date(),
+    lastModified: now,
     changeFrequency: "weekly",
     priority: 0.9,
   }));
@@ -30,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 3. City Pages (/locations/[state]/[city]) → priority 0.8, weekly
   const cityPages: MetadataRoute.Sitemap = locations.map((location) => ({
     url: `${baseUrl}/locations/${location.stateSlug}/${location.citySlug}`,
-    lastModified: new Date(),
+    lastModified: now,
     changeFrequency: "weekly",
     priority: 0.8,
   }));
@@ -43,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       if (service.id !== "yard-maintenance") {
         locationServicePages.push({
           url: `${baseUrl}/locations/${location.stateSlug}/${location.citySlug}/${service.id}`,
-          lastModified: new Date(),
+          lastModified: now,
           changeFrequency: "monthly",
           priority: 0.7,
         });
@@ -55,7 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogPosts = getAllBlogPosts();
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(),
+    lastModified: now,
     changeFrequency: "monthly",
     priority: 0.6,
   }));
@@ -64,37 +65,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/services`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/locations`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/how-it-works`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/faq`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.5,
     },
@@ -103,11 +104,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Service pages (individual service pages at /services/[serviceId])
   const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
     url: `${baseUrl}/services/${service.id}`,
-    lastModified: new Date(),
+    lastModified: now,
     changeFrequency: "monthly",
     priority: 0.5,
   }));
 
+  // Return in priority order: Homepage > State > City > Service > Blog > Static
   return [
     ...homepage,
     ...statePages,
