@@ -155,35 +155,71 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {services.map((service) => (
-                <Link
-                  key={service.id}
-                  href={`/services/${service.id}`}
-                  className="bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all transform hover:-translate-y-1 group"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary-600 to-primary-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+              {services.map((service) => {
+                // "Yard Maintenance" is the main service, so don't link it
+                const isYardMaintenance = service.id === "yard-maintenance";
+                
+                if (isYardMaintenance) {
+                  return (
+                    <div
+                      key={service.id}
+                      className="bg-gray-50 p-6 rounded-xl border border-gray-200"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
-                    {service.name}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {service.shortDescription}
-                  </p>
-                </Link>
-              ))}
+                      <div className="w-12 h-12 bg-gradient-to-br from-primary-600 to-primary-700 rounded-lg flex items-center justify-center mb-4">
+                        <svg
+                          className="w-6 h-6 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                        {service.name}
+                      </h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {service.shortDescription}
+                      </p>
+                    </div>
+                  );
+                }
+                
+                return (
+                  <Link
+                    key={service.id}
+                    href={`/services/${service.id}`}
+                    className="bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all transform hover:-translate-y-1 group"
+                  >
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary-600 to-primary-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                      {service.name}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {service.shortDescription}
+                    </p>
+                  </Link>
+                );
+              })}
             </div>
             <div className="text-center mt-8">
               <Link
