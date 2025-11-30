@@ -35,19 +35,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // 4. City Service Pages (/locations/[state]/[city]/[service]) → priority 0.7, monthly
-  const locationServicePages: MetadataRoute.Sitemap = [];
-  locations.forEach((location) => {
-    services.forEach((service) => {
-      locationServicePages.push({
-        url: `${baseUrl}/locations/${location.stateSlug}/${location.citySlug}/${service.id}`,
-        lastModified: new Date(),
-        changeFrequency: "monthly",
-        priority: 0.7,
-      });
-    });
-  });
-
   // 5. Blog Posts → priority 0.6, monthly
   const blogPosts = getAllBlogPosts();
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
@@ -109,7 +96,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...homepage,
     ...statePages,
     ...cityPages,
-    ...locationServicePages,
     ...blogPages,
     ...staticPages,
     ...servicePages,

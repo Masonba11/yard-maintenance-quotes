@@ -178,7 +178,7 @@ export default function ServicePage({ params }: ServicePageProps) {
                 {primaryLocations.map((location) => (
                   <Link
                     key={`${location.stateSlug}-${location.citySlug}`}
-                    href={`/locations/${location.stateSlug}/${location.citySlug}/${service.id}`}
+                    href={`/locations/${location.stateSlug}/${location.citySlug}`}
                     className="text-sm text-primary-600 hover:text-primary-700 hover:underline"
                   >
                     {location.city}, {location.state}
