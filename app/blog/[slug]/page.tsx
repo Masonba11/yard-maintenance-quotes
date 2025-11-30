@@ -64,9 +64,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   // Get relevant locations for this blog post's state
   const stateSlug = categoryToStateSlug[post.category];
   const relevantLocations = stateSlug
-    ? locations.filter(
-        (loc) => loc.stateSlug === stateSlug && loc.isPrimary
-      )
+    ? locations.filter((loc) => loc.stateSlug === stateSlug && loc.isPrimary)
     : [];
 
   return (
@@ -90,10 +88,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             <nav className="mb-6" aria-label="Breadcrumb">
               <ol className="flex items-center space-x-2 text-sm text-white/80">
                 <li>
-                  <Link
-                    href="/"
-                    className="hover:text-white transition-colors"
-                  >
+                  <Link href="/" className="hover:text-white transition-colors">
                     Home
                   </Link>
                 </li>
@@ -158,7 +153,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               {services.map((service) => {
                 // "Yard Maintenance" is the main service, so don't link it
                 const isYardMaintenance = service.id === "yard-maintenance";
-                
+
                 if (isYardMaintenance) {
                   return (
                     <div
@@ -189,7 +184,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                     </div>
                   );
                 }
-                
+
                 return (
                   <Link
                     key={service.id}
@@ -252,7 +247,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                   Service Areas
                 </h2>
                 <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                  Get yard maintenance quotes in these {relevantLocations[0]?.state} cities
+                  Get yard maintenance quotes in these{" "}
+                  {relevantLocations[0]?.state} cities
                 </p>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -265,7 +261,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                     <div className="font-bold text-gray-900 mb-1 text-lg group-hover:text-primary-600 transition-colors">
                       {location.city}
                     </div>
-                    <div className="text-sm text-gray-600">{location.state}</div>
+                    <div className="text-sm text-gray-600">
+                      {location.state}
+                    </div>
                   </Link>
                 ))}
               </div>

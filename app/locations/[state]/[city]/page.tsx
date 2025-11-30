@@ -227,34 +227,87 @@ export default function LocationPage({ params }: LocationPageProps) {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {services.map((service) => (
-                <div
-                  key={service.id}
-                  className="bg-white p-6 rounded-xl border border-gray-200 shadow-md"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary-600 to-primary-700 rounded-lg flex items-center justify-center mb-4">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+              {services.map((service) => {
+                // "Yard Maintenance" is the main page, so don't link it
+                const isYardMaintenance = service.id === "yard-maintenance";
+
+                if (isYardMaintenance) {
+                  return (
+                    <div
+                      key={service.id}
+                      className="bg-white p-6 rounded-xl border border-gray-200 shadow-md"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {service.name}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {service.shortDescription}
-                  </p>
-                </div>
-              ))}
+                      <div className="w-12 h-12 bg-gradient-to-br from-primary-600 to-primary-700 rounded-lg flex items-center justify-center mb-4">
+                        <svg
+                          className="w-6 h-6 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                        {service.name}
+                      </h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {service.shortDescription}
+                      </p>
+                    </div>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={service.id}
+                    href={`/locations/${location.stateSlug}/${location.citySlug}/${service.id}`}
+                    className="bg-white p-6 rounded-xl border border-gray-200 hover:border-primary-300 shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 group"
+                  >
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary-600 to-primary-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                      {service.name}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      {service.shortDescription}
+                    </p>
+                    <div className="text-primary-600 font-semibold text-sm flex items-center gap-1">
+                      Get quotes
+                      <svg
+                        className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>
