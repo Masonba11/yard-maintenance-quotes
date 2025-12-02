@@ -102,7 +102,7 @@ export default function LocationPage({ params }: LocationPageProps) {
         />
       )}
       <Hero
-        headline={`Fast Yard Maintenance in ${location.city}, ${location.state}`}
+        headline={`Fast Yard Maintenance ${location.city}, ${location.state}`}
         subheadline={`Get matched with pre-screened yard maintenance professionals in ${location.displayName}. Free quotes, no obligation.`}
       />
 
@@ -110,7 +110,7 @@ export default function LocationPage({ params }: LocationPageProps) {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Yard Maintenance Services in {location.displayName}
+              Yard Maintenance Services {location.displayName}
             </h2>
 
             <div className="prose prose-lg max-w-none mb-8">
@@ -144,7 +144,7 @@ export default function LocationPage({ params }: LocationPageProps) {
 
               <div className="bg-primary-50 border-l-4 border-primary-500 p-8 rounded-lg mb-8 mt-10">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Why Homeowners in {location.city} Use Yard Maintenance
+                  Why {location.city} Homeowners Use Yard Maintenance
                 </h3>
                 <ul className="list-disc pl-6 text-gray-700 space-y-3 text-lg">
                   <li>
@@ -452,7 +452,7 @@ export default function LocationPage({ params }: LocationPageProps) {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
               <span className="bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent">
-                Frequently Asked Questions About Yard Maintenance in{" "}
+                Frequently Asked Questions About Yard Maintenance{" "}
                 {location.displayName}
               </span>
             </h2>

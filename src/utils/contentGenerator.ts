@@ -195,7 +195,7 @@ export function generateLocationContent(location: Location): ContentSection[] {
 
   return [
     {
-      title: `Yard Maintenance in ${location.displayName}`,
+      title: `Yard Maintenance ${location.displayName}`,
       content: `${baseContent} Homeowners in ${location.city} benefit from working with professionals who understand these local conditions and can provide maintenance services tailored to the area's specific requirements.`,
     },
     {
@@ -229,7 +229,7 @@ export function generateLocationServiceContent(
     "yard-maintenance": {
       Arizona: [
         {
-          title: `Yard Maintenance in ${location.city}: Desert Landscape Care`,
+          title: `Yard Maintenance ${location.city}: Desert Landscape Care`,
           content: `Maintaining yards in ${location.city}, Arizona requires specialized knowledge of desert-adapted plants and water-efficient practices. The intense sun and limited rainfall mean yard maintenance focuses on drought-tolerant species, efficient irrigation, and understanding which plants thrive in arid conditions. Professional yard maintenance services in ${location.displayName} help homeowners create beautiful, sustainable landscapes that work with the desert environment rather than against it.`,
         },
       ],

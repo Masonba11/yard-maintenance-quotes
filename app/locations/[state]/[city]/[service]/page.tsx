@@ -131,7 +131,7 @@ export default function LocationServicePage({
       )}
 
       <Hero
-        headline={`${service.name} in ${location.city}, ${location.state}`}
+        headline={`${service.name} ${location.city}, ${location.state}`}
         subheadline={`Get matched with local ${service.name.toLowerCase()} professionals in ${
           location.displayName
         }. Free quotes, no obligation.`}
@@ -141,7 +141,7 @@ export default function LocationServicePage({
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              {service.name} Services in {location.displayName}
+              {service.name} Services {location.displayName}
             </h2>
 
             <div className="prose prose-lg max-w-none mb-8">

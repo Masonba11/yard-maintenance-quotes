@@ -65,8 +65,8 @@ const LocationSchema: React.FC<Props> = ({
 
   // Service Schema
   const serviceName = isStateLevel
-    ? `Yard Maintenance in ${stateName}`
-    : `Yard Maintenance in ${cityName}, ${stateName}`;
+    ? `Yard Maintenance ${stateName}`
+    : `Yard Maintenance ${cityName}, ${stateName}`;
   const areaServedName = isStateLevel ? stateName : `${cityName}, ${stateName}`;
 
   const serviceJson = {

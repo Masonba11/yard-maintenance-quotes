@@ -15,7 +15,7 @@ export default function Hero({
   city,
   state,
 }: HeroProps) {
-  const locationText = city && state ? ` in ${city}, ${state}` : "";
+  const locationText = city && state ? ` ${city}, ${state}` : "";
 
   return (
     <section className="relative bg-gradient-to-br from-primary-50 via-white to-primary-50 py-20 md:py-32 overflow-hidden">
