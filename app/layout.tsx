@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: {
     default: "Yard Maintenance | Fast, Free Quotes from Local Pros",
-    template: "%s | Yard Maintenance",
+    template: "%s",
   },
   description:
     "Get fast, free yard maintenance quotes from pre-screened local professionals. One simple form, multiple quote options. No spam, no obligation.",
