@@ -7,7 +7,7 @@ import LeadForm from "@/src/components/LeadForm";
 import FAQ from "@/src/components/FAQ";
 
 export const metadata = {
-  title: "Fast Yard Maintenance Quotes in Minutes",
+  title: "Fast Yard Maintenance in Minutes",
   description:
     "Get fast, free yard maintenance quotes from pre-screened local professionals. One simple form, multiple quote options. No spam, no obligation.",
 };

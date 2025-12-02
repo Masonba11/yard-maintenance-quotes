@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="lg:col-span-1">
             <h3 className="text-white font-bold text-xl mb-4 bg-gradient-to-r from-primary-400 to-primary-500 bg-clip-text text-transparent">
-              Yard Maintenance Quotes
+              Yard Maintenance
             </h3>
             <p className="text-sm text-gray-400 leading-relaxed">
               Connecting homeowners with trusted local yard maintenance
@@ -126,10 +126,10 @@ export default function Footer() {
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
             <p className="text-gray-400">
-              © {currentYear} Yard Maintenance Quotes. All rights reserved.
+              © {currentYear} Yard Maintenance. All rights reserved.
             </p>
             <p className="text-gray-500 text-xs max-w-2xl text-center md:text-right">
-              Yard Maintenance Quotes is a lead generation and matching service.
+              Yard Maintenance is a lead generation and matching service.
               We connect homeowners with independent local contractors. We do
               not perform yard maintenance services ourselves.
             </p>

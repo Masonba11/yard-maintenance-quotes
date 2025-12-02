@@ -95,7 +95,7 @@ export default function QuoteForm({
         state: stateName || "",
         city: cityName || "",
         message: formData.message || "",
-        from_name: "Yard Maintenance Quotes",
+        from_name: "Yard Maintenance",
       };
 
       console.log("Submitting form data:", {

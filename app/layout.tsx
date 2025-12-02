@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Yard Maintenance Quotes | Fast, Free Quotes from Local Pros",
-    template: "%s | Yard Maintenance Quotes",
+    default: "Yard Maintenance | Fast, Free Quotes from Local Pros",
+    template: "%s | Yard Maintenance",
   },
   description:
     "Get fast, free yard maintenance quotes from pre-screened local professionals. One simple form, multiple quote options. No spam, no obligation.",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     apple: "/YMQ2.png",
   },
   openGraph: {
-    title: "Yard Maintenance Quotes | Fast, Free Quotes from Local Pros",
+    title: "Yard Maintenance | Fast, Free Quotes from Local Pros",
     description:
       "Get fast, free yard maintenance quotes from pre-screened local professionals.",
     type: "website",
@@ -62,7 +62,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "Yard Maintenance Quotes",
+              name: "Yard Maintenance",
               url: "https://yardmaintenancequote.com",
               description:
                 "Connect with local yard maintenance professionals for free quotes.",
@@ -81,7 +81,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Yard Maintenance Quotes",
+              name: "Yard Maintenance",
               url: "https://yardmaintenancequote.com",
               description:
                 "A lead generation service connecting homeowners with local yard maintenance professionals.",

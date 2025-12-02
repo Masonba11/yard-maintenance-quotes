@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for Yard Maintenance Quotes",
+  description: "Privacy Policy for Yard Maintenance",
 };
 
 export default function PrivacyPolicyPage() {
@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto prose prose-lg">
             <p className="text-gray-700 mb-6">
-              <strong>Yard Maintenance Quotes</strong> ("we," "our," or "us") is
+              <strong>Yard Maintenance</strong> ("we," "our," or "us") is
               committed to protecting your privacy. This Privacy Policy explains
               how we collect, use, and share information when you use our
               website and services.

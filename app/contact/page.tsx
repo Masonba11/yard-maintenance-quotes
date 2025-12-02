@@ -4,7 +4,7 @@ import FAQ from "@/src/components/FAQ";
 export const metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Yard Maintenance Quotes or request a free yard maintenance quote from local professionals.",
+    "Get in touch with Yard Maintenance or request a free yard maintenance quote from local professionals.",
 };
 
 export default function ContactPage() {

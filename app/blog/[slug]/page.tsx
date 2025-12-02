@@ -31,7 +31,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} | Yard Maintenance Quotes Blog`,
+    title: `${post.title} | Yard Maintenance Blog`,
     description: post.metaDescription,
     openGraph: {
       title: post.title,

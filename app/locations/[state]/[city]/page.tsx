@@ -39,7 +39,7 @@ export async function generateMetadata({
     };
   }
 
-  const title = `Yard Maintenance Quotes in ${location.displayName} | Free Quotes`;
+  const title = `Yard Maintenance in ${location.displayName} | Free Quotes`;
   const description = `Get fast, free yard maintenance quotes in ${location.displayName}. Connect with pre-screened local professionals for lawn mowing, yard cleanup, and landscaping maintenance.`;
 
   return {
@@ -102,7 +102,7 @@ export default function LocationPage({ params }: LocationPageProps) {
         />
       )}
       <Hero
-        headline={`Fast Yard Maintenance Quotes in ${location.city}, ${location.state}`}
+        headline={`Fast Yard Maintenance in ${location.city}, ${location.state}`}
         subheadline={`Get matched with pre-screened yard maintenance professionals in ${location.displayName}. Free quotes, no obligation.`}
       />
 
@@ -116,7 +116,7 @@ export default function LocationPage({ params }: LocationPageProps) {
             <div className="prose prose-lg max-w-none mb-8">
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
                 Homeowners in {location.displayName} trust Yard Maintenance
-                Quotes to connect them with reliable, professional yard
+                to connect them with reliable, professional yard
                 maintenance services. Whether you need regular lawn mowing,
                 seasonal yard cleanup, or ongoing landscaping maintenance, we
                 make it easy to find the right professional for your needs.
@@ -144,7 +144,7 @@ export default function LocationPage({ params }: LocationPageProps) {
 
               <div className="bg-primary-50 border-l-4 border-primary-500 p-8 rounded-lg mb-8 mt-10">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Why Homeowners in {location.city} Use Yard Maintenance Quotes
+                  Why Homeowners in {location.city} Use Yard Maintenance
                 </h3>
                 <ul className="list-disc pl-6 text-gray-700 space-y-3 text-lg">
                   <li>

@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Service Areas",
   description:
-    "View all cities and locations where Yard Maintenance Quotes connects homeowners with local yard maintenance professionals.",
+    "View all cities and locations where Yard Maintenance connects homeowners with local yard maintenance professionals.",
 };
 
 export default function LocationsPage() {

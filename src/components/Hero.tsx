@@ -9,7 +9,7 @@ interface HeroProps {
 }
 
 export default function Hero({
-  headline = "Fast Yard Maintenance Quotes in Minutes",
+  headline = "Fast Yard Maintenance in Minutes",
   subheadline = "Tell us about your yard once and we&apos;ll match you with a local yard maintenance pro for a free, no-obligation quote.",
   showForm = false,
   city,

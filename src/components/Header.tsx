@@ -20,7 +20,7 @@ export default function Header() {
           <Link href="/" className="flex items-center -my-1">
             <Image
               src="/logo.png"
-              alt="Yard Maintenance Quotes"
+              alt="Yard Maintenance"
               width={1200}
               height={360}
               className="h-20 md:h-28 lg:h-32 w-auto object-contain"

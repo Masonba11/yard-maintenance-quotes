@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Terms of Service",
-  description: "Terms of Service for Yard Maintenance Quotes",
+  description: "Terms of Service for Yard Maintenance",
 };
 
 export default function TermsPage() {
@@ -24,15 +24,15 @@ export default function TermsPage() {
           <div className="max-w-3xl mx-auto prose prose-lg">
             <p className="text-gray-700 mb-6">
               Please read these Terms of Service ("Terms") carefully before
-              using Yard Maintenance Quotes ("the Service") operated by Yard
-              Maintenance Quotes ("us," "we," or "our").
+              using Yard Maintenance ("the Service") operated by Yard
+              Maintenance ("us," "we," or "our").
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
               Service Description
             </h2>
             <p className="text-gray-700 mb-4">
-              Yard Maintenance Quotes is a lead generation and matching service.
+              Yard Maintenance is a lead generation and matching service.
               We connect homeowners with local yard maintenance professionals.
               We do not perform yard maintenance services ourselves, and we are
               not responsible for the work performed by the professionals we
@@ -63,7 +63,7 @@ export default function TermsPage() {
               Limitation of Liability
             </h2>
             <p className="text-gray-700 mb-4">
-              Yard Maintenance Quotes is provided "as is" without warranties of
+              Yard Maintenance is provided "as is" without warranties of
               any kind. We are not liable for any damages arising from your use
               of the Service or from work performed by professionals we connect
               you with.

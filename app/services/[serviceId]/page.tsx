@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: ServicePageProps) {
     };
   }
 
-  const title = `${service.name} | Yard Maintenance Quotes`;
+  const title = `${service.name} | Yard Maintenance`;
   const description = `${service.description} Get free quotes from local professionals.`;
 
   return {

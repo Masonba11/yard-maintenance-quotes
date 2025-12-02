@@ -17,7 +17,7 @@ const defaultFAQItems: FAQItem[] = [
   {
     question: "How much does it cost to get a quote?",
     answer:
-      "Getting a quote through Yard Maintenance Quotes is completely free. There are no fees, no obligations, and no hidden costs. Local professionals will contact you directly with their quotes.",
+      "Getting a quote through Yard Maintenance is completely free. There are no fees, no obligations, and no hidden costs. Local professionals will contact you directly with their quotes.",
   },
   {
     question: "How many quotes will I receive?",
@@ -27,7 +27,7 @@ const defaultFAQItems: FAQItem[] = [
   {
     question: "Who actually does the yard maintenance work?",
     answer:
-      "Yard Maintenance Quotes is a lead generation and matching service. We connect you with local, licensed yard maintenance professionals in your area. The actual work is performed by these independent contractors, not by us.",
+      "Yard Maintenance is a lead generation and matching service. We connect you with local, licensed yard maintenance professionals in your area. The actual work is performed by these independent contractors, not by us.",
   },
   {
     question: "How quickly will I be contacted?",

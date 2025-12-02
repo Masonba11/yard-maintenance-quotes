@@ -28,7 +28,7 @@ export default function Benefits() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
             <span className="bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent">
-              Why Homeowners Use Yard Maintenance Quotes
+              Why Homeowners Use Yard Maintenance
             </span>
           </h2>
         </div>

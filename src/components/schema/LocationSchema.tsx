@@ -27,8 +27,8 @@ const LocationSchema: React.FC<Props> = ({
   // If cityName === stateName, this is a state-level page, so just use stateName
   const isStateLevel = cityName === stateName;
   const placeName = isStateLevel
-    ? `Yard Maintenance Quotes – ${stateName}`
-    : `Yard Maintenance Quotes – ${cityName}, ${stateName}`;
+    ? `Yard Maintenance – ${stateName}`
+    : `Yard Maintenance – ${cityName}, ${stateName}`;
   const placeDescription = isStateLevel
     ? `Get free yard maintenance quotes across ${stateName}. Connect with pre-screened local professionals for lawn care, yard cleanup, and landscaping services throughout ${stateName}.`
     : `Get free yard maintenance quotes in ${cityName}, ${stateName}. Connect with pre-screened local professionals for lawn care, yard cleanup, and landscaping services.`;
@@ -76,7 +76,7 @@ const LocationSchema: React.FC<Props> = ({
     serviceType: services.join(", "),
     provider: {
       "@type": "Organization",
-      name: "Yard Maintenance Quotes",
+      name: "Yard Maintenance",
       url: "https://yardmaintenancequote.com",
     },
     areaServed: {

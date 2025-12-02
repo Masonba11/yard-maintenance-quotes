@@ -147,7 +147,7 @@ export default function LocationServicePage({
             <div className="prose prose-lg max-w-none mb-8">
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
                 Homeowners in {location.displayName} trust Yard Maintenance
-                Quotes to connect them with reliable, professional{" "}
+                to connect them with reliable, professional{" "}
                 {service.name.toLowerCase()} services. {service.description}
               </p>
 

@@ -101,7 +101,7 @@ export function getWebsiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Yard Maintenance Quotes",
+    name: "Yard Maintenance",
     url: BASE_URL,
     description:
       "Get fast, free yard maintenance quotes from pre-screened local professionals. Connect with trusted lawn care and landscaping experts in your area.",
@@ -121,11 +121,11 @@ export function getOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Yard Maintenance Quotes",
+    name: "Yard Maintenance",
     url: BASE_URL,
     logo: `${BASE_URL}/logo.png`,
     description:
-      "Yard Maintenance Quotes connects homeowners with pre-screened local yard maintenance professionals. We provide free, no-obligation quotes for lawn care, yard cleanup, and landscaping services.",
+      "Yard Maintenance connects homeowners with pre-screened local yard maintenance professionals. We provide free, no-obligation quotes for lawn care, yard cleanup, and landscaping services.",
     sameAs: [
       // Add social media URLs if available
     ],
@@ -148,7 +148,7 @@ export function getServiceSchema(serviceName: string) {
     description: `Professional ${serviceName.toLowerCase()} services. Get free quotes from local professionals.`,
     provider: {
       "@type": "Organization",
-      name: "Yard Maintenance Quotes",
+      name: "Yard Maintenance",
       url: BASE_URL,
     },
     areaServed: {
@@ -187,7 +187,7 @@ export function getLocationSchema(
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: `Yard Maintenance Quotes - ${fullLocation}`,
+    name: `Yard Maintenance - ${fullLocation}`,
     description: `Get free yard maintenance quotes in ${fullLocation}. Connect with pre-screened local professionals for lawn care, yard cleanup, and landscaping services.`,
     url: `${BASE_URL}/locations/${stateSlug}/${citySlug}`,
     ...(geo && {
@@ -213,7 +213,7 @@ export function getLocationSchema(
       : undefined,
     provider: {
       "@type": "Organization",
-      name: "Yard Maintenance Quotes",
+      name: "Yard Maintenance",
       url: BASE_URL,
     },
   };
@@ -240,7 +240,7 @@ export function getCityServiceSchema(
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: `${service} in ${fullLocation} | Yard Maintenance Quotes`,
+    name: `${service} in ${fullLocation} | Yard Maintenance`,
     description: `Get free quotes for ${service.toLowerCase()} in ${fullLocation}. Connect with pre-screened local professionals.`,
     url: `${BASE_URL}/locations/${stateSlug}/${citySlug}/${serviceSlug}`,
     ...(geo && {
@@ -266,7 +266,7 @@ export function getCityServiceSchema(
       : undefined,
     provider: {
       "@type": "Organization",
-      name: "Yard Maintenance Quotes",
+      name: "Yard Maintenance",
       url: BASE_URL,
     },
     makesOffer: {
@@ -321,12 +321,12 @@ export function getBlogSchema(post: BlogPostData) {
     dateModified: post.dateModified || post.datePublished,
     author: {
       "@type": "Organization",
-      name: post.author || "Yard Maintenance Quotes",
+      name: post.author || "Yard Maintenance",
       url: BASE_URL,
     },
     publisher: {
       "@type": "Organization",
-      name: "Yard Maintenance Quotes",
+      name: "Yard Maintenance",
       url: BASE_URL,
       logo: {
         "@type": "ImageObject",

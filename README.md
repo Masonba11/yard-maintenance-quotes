@@ -1,4 +1,4 @@
-# Yard Maintenance Quotes
+# Yard Maintenance
 
 A production-ready lead-generation website for connecting homeowners with local yard maintenance professionals.
 

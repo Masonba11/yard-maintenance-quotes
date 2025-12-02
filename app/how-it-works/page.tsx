@@ -6,7 +6,7 @@ import FAQ from "@/src/components/FAQ";
 export const metadata = {
   title: "How It Works",
   description:
-    "Learn how Yard Maintenance Quotes connects you with local yard maintenance professionals in three simple steps.",
+    "Learn how Yard Maintenance connects you with local yard maintenance professionals in three simple steps.",
 };
 
 export default function HowItWorksPage() {

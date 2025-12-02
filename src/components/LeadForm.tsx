@@ -80,8 +80,8 @@ export default function LeadForm({
 
       const leadSource =
         city && state
-          ? `Yard Maintenance Quotes - ${city}, ${state}`
-          : "Yard Maintenance Quotes";
+          ? `Yard Maintenance - ${city}, ${state}`
+          : "Yard Maintenance";
 
       const submissionData = {
         access_key: WEB3FORMS_ACCESS_KEY,
@@ -99,7 +99,7 @@ export default function LeadForm({
         state_slug: stateSlug || "",
         lead_source: leadSource,
         page_url: typeof window !== "undefined" ? window.location.href : "",
-        from_name: "Yard Maintenance Quotes",
+        from_name: "Yard Maintenance",
       };
 
       console.log("Submitting form data:", {

@@ -154,7 +154,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get a Fast Yard Maintenance Quote in Arizona</h2>
 
-<p>No matter where you live in the state, finding a reliable yard-care professional shouldn't be difficult. At Yard Maintenance Quotes, we make it simple — one quick form connects you with a trusted local provider in your area.</p>`,
+<p>No matter where you live in the state, finding a reliable yard-care professional shouldn't be difficult. At Yard Maintenance, we make it simple — one quick form connects you with a trusted local provider in your area.</p>`,
   },
   {
     slug: "drought-friendly-yard-maintenance-tips-arizona",
@@ -442,7 +442,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>No matter what you choose, professional maintenance helps keep your yard from getting out of control. Weeds, debris, overgrowth, and irrigation issues can make even the best-designed yard look neglected.</p>
 
-<p>If you're ready to clean up your yard, refresh your gravel, or get help maintaining your grass, Yard Maintenance Quotes connects you with local professionals who understand Arizona's unique landscape.</p>`,
+<p>If you're ready to clean up your yard, refresh your gravel, or get help maintaining your grass, Yard Maintenance connects you with local professionals who understand Arizona's unique landscape.</p>`,
   },
   {
     slug: "weed-control-critical-arizona-monsoon-season",
@@ -585,7 +585,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>Arizona's monsoon season will always bring storms — and weeds. But with the right weed-control plan, you don't have to let them take over your yard.</p>
 
-<p>If your yard is already getting out of control, or you want to get ahead before the next storm cycle, Yard Maintenance Quotes can connect you with a local professional who handles weed removal, yard cleanup, and ongoing maintenance.</p>`,
+<p>If your yard is already getting out of control, or you want to get ahead before the next storm cycle, Yard Maintenance can connect you with a local professional who handles weed removal, yard cleanup, and ongoing maintenance.</p>`,
   },
   {
     slug: "complete-arizona-seasonal-yard-cleanup-guide",
@@ -730,7 +730,7 @@ export const blogPosts: BlogPost[] = [
 <li>Gravel yards get messy over time</li>
 </ul>
 
-<p>If your yard needs a reset — whether it's spring, monsoon, or fall — Yard Maintenance Quotes can connect you with a local cleanup crew that understands Arizona yards.</p>`,
+<p>If your yard needs a reset — whether it's spring, monsoon, or fall — Yard Maintenance can connect you with a local cleanup crew that understands Arizona yards.</p>`,
   },
   {
     slug: "how-oklahoma-weather-extremes-impact-yard-maintenance",
@@ -925,7 +925,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get a Yard Maintenance Quote in Oklahoma</h2>
 
-<p>Whether you live in Oklahoma City, Tulsa, Edmond, Norman, Moore, or Broken Arrow, Yard Maintenance Quotes connects you with trusted pros who understand Oklahoma's unique climate.</p>`,
+<p>Whether you live in Oklahoma City, Tulsa, Edmond, Norman, Moore, or Broken Arrow, Yard Maintenance connects you with trusted pros who understand Oklahoma's unique climate.</p>`,
   },
   {
     slug: "best-lawn-mowing-schedule-oklahoma",
@@ -1067,7 +1067,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get a Lawn Mowing Quote in Oklahoma</h2>
 
-<p>Ready for easy yard maintenance? Let Yard Maintenance Quotes connect you with reliable lawn-care pros.</p>`,
+<p>Ready for easy yard maintenance? Let Yard Maintenance connect you with reliable lawn-care pros.</p>`,
   },
   {
     slug: "prepare-yard-oklahoma-storm-season",
@@ -1279,7 +1279,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Professional Storm Cleanup Help in Oklahoma</h2>
 
-<p>If your yard needs cleanup after a storm, or you want to prepare before the next one, Yard Maintenance Quotes can connect you with local professionals who handle storm damage and yard restoration throughout Oklahoma.</p>`,
+<p>If your yard needs cleanup after a storm, or you want to prepare before the next one, Yard Maintenance can connect you with local professionals who handle storm damage and yard restoration throughout Oklahoma.</p>`,
   },
   {
     slug: "common-oklahoma-weeds-removal",
@@ -1537,7 +1537,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Professional Weed Control in Oklahoma</h2>
 
-<p>If weeds are taking over your yard, professional weed control services can help. Yard Maintenance Quotes connects you with local professionals who understand Oklahoma's weed challenges and can develop an effective control plan for your property.</p>`,
+<p>If weeds are taking over your yard, professional weed control services can help. Yard Maintenance connects you with local professionals who understand Oklahoma's weed challenges and can develop an effective control plan for your property.</p>`,
   },
   {
     slug: "oklahoma-yard-cleanup-checklist-spring-fall",
@@ -1749,7 +1749,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Professional Yard Cleanup in Oklahoma</h2>
 
-<p>If you need help with spring or fall cleanup, Yard Maintenance Quotes can connect you with local professionals who understand Oklahoma's seasonal needs and can restore your yard efficiently.</p>`,
+<p>If you need help with spring or fall cleanup, Yard Maintenance can connect you with local professionals who understand Oklahoma's seasonal needs and can restore your yard efficiently.</p>`,
   },
   {
     slug: "how-tennessee-humidity-rainfall-seasons-affect-yard-maintenance",
@@ -1970,7 +1970,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get a Yard Maintenance Quote in Tennessee</h2>
 
-<p>Whether you live in Nashville, Knoxville, Memphis, or a surrounding area, Yard Maintenance Quotes connects you with trusted local pros for mowing, trimming, weed removal, and full yard cleanups.</p>`,
+<p>Whether you live in Nashville, Knoxville, Memphis, or a surrounding area, Yard Maintenance connects you with trusted local pros for mowing, trimming, weed removal, and full yard cleanups.</p>`,
   },
   {
     slug: "best-lawn-mowing-schedule-tennessee",
@@ -2209,7 +2209,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get a Lawn Mowing Quote in Tennessee</h2>
 
-<p>If you want your Tennessee lawn consistently clean and healthy, Yard Maintenance Quotes connects you with reliable local mowing professionals.</p>`,
+<p>If you want your Tennessee lawn consistently clean and healthy, Yard Maintenance connects you with reliable local mowing professionals.</p>`,
   },
   {
     slug: "why-leaf-removal-essential-tennessee-fall",
@@ -2506,7 +2506,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Leaf Removal Services for Your Tennessee Home</h2>
 
-<p>If you're dealing with heavy leaf fall in Tennessee — or don't want to spend every Saturday blowing leaves — Yard Maintenance Quotes can connect you with trusted professionals who handle full-service leaf removal and cleanup.</p>`,
+<p>If you're dealing with heavy leaf fall in Tennessee — or don't want to spend every Saturday blowing leaves — Yard Maintenance can connect you with trusted professionals who handle full-service leaf removal and cleanup.</p>`,
   },
   {
     slug: "common-tennessee-weeds-best-ways-remove",
@@ -2862,7 +2862,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Weed Removal Solutions for Your Tennessee Home</h2>
 
-<p>If weeds are taking over your yard — or if you want a full seasonal weed control plan — Yard Maintenance Quotes connects you with reliable Tennessee weed removal professionals.</p>`,
+<p>If weeds are taking over your yard — or if you want a full seasonal weed control plan — Yard Maintenance connects you with reliable Tennessee weed removal professionals.</p>`,
   },
   {
     slug: "tennessee-yard-cleanup-checklist-seasons",
@@ -3207,7 +3207,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Seasonal Yard Cleanup Services in Tennessee</h2>
 
-<p>If you want a clean, healthy yard all year long, Yard Maintenance Quotes connects you with Tennessee professionals who specialize in:</p>
+<p>If you want a clean, healthy yard all year long, Yard Maintenance connects you with Tennessee professionals who specialize in:</p>
 
 <ul>
 <li>Yard cleanups</li>
@@ -3497,7 +3497,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Yard Cleanup Anywhere in South Carolina</h2>
 
-<p>Yard Maintenance Quotes connects homeowners with reliable yard care pros across SC.</p>`,
+<p>Yard Maintenance connects homeowners with reliable yard care pros across SC.</p>`,
   },
   {
     slug: "best-lawn-mowing-schedule-south-carolina",
@@ -3604,7 +3604,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Professional Mowing in South Carolina</h2>
 
-<p>Yard Maintenance Quotes connects you with reliable SC mowing pros.</p>`,
+<p>Yard Maintenance connects you with reliable SC mowing pros.</p>`,
   },
   {
     slug: "why-leaf-removal-essential-south-carolina-fall",
@@ -3783,7 +3783,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Leaf Removal Services for Your South Carolina Home</h2>
 
-<p>If you're dealing with heavy leaf fall in South Carolina — or don't want to spend every Saturday blowing leaves — Yard Maintenance Quotes can connect you with trusted professionals who handle full-service leaf removal and cleanup.</p>`,
+<p>If you're dealing with heavy leaf fall in South Carolina — or don't want to spend every Saturday blowing leaves — Yard Maintenance can connect you with trusted professionals who handle full-service leaf removal and cleanup.</p>`,
   },
   {
     slug: "common-south-carolina-weeds-best-ways-remove",
@@ -4066,7 +4066,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Weed Removal Solutions for Your South Carolina Home</h2>
 
-<p>If weeds are taking over your yard — or if you want a full seasonal weed control plan — Yard Maintenance Quotes connects you with reliable South Carolina weed removal professionals.</p>`,
+<p>If weeds are taking over your yard — or if you want a full seasonal weed control plan — Yard Maintenance connects you with reliable South Carolina weed removal professionals.</p>`,
   },
   {
     slug: "south-carolina-yard-cleanup-checklist-seasons",
@@ -4418,7 +4418,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Seasonal Yard Cleanup Services in South Carolina</h2>
 
-<p>If you want a clean, healthy yard all year long, Yard Maintenance Quotes connects you with South Carolina professionals who specialize in:</p>
+<p>If you want a clean, healthy yard all year long, Yard Maintenance connects you with South Carolina professionals who specialize in:</p>
 
 <ul>
 <li>Yard cleanups</li>
@@ -4714,7 +4714,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Yard Cleanup Anywhere in Texas</h2>
 
-<p>Yard Maintenance Quotes connects homeowners with vetted Texas yard professionals.</p>`,
+<p>Yard Maintenance connects homeowners with vetted Texas yard professionals.</p>`,
   },
   {
     slug: "best-lawn-mowing-schedule-texas",
@@ -4857,7 +4857,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Professional Mowing in Texas</h2>
 
-<p>If you want consistent, clean mowing, Yard Maintenance Quotes connects you with reliable Texas mowing professionals.</p>`,
+<p>If you want consistent, clean mowing, Yard Maintenance connects you with reliable Texas mowing professionals.</p>`,
   },
   {
     slug: "why-leaf-storm-debris-removal-essential-texas",
@@ -5048,7 +5048,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Leaf and Storm Debris Removal Services for Your Texas Home</h2>
 
-<p>If you're dealing with heavy debris in Texas — or don't want to spend every weekend cleaning up after storms — Yard Maintenance Quotes can connect you with trusted professionals who handle full-service debris removal and cleanup.</p>`,
+<p>If you're dealing with heavy debris in Texas — or don't want to spend every weekend cleaning up after storms — Yard Maintenance can connect you with trusted professionals who handle full-service debris removal and cleanup.</p>`,
   },
   {
     slug: "most-common-texas-weeds-how-remove",
@@ -5309,7 +5309,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Weed Removal Solutions for Your Texas Home</h2>
 
-<p>If weeds are taking over your yard — or if you want a full seasonal weed control plan — Yard Maintenance Quotes connects you with reliable Texas weed removal professionals.</p>`,
+<p>If weeds are taking over your yard — or if you want a full seasonal weed control plan — Yard Maintenance connects you with reliable Texas weed removal professionals.</p>`,
   },
   {
     slug: "texas-yard-cleanup-checklist-seasons",
@@ -5669,7 +5669,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Seasonal Yard Cleanup Services in Texas</h2>
 
-<p>If you want a clean, healthy yard all year long, Yard Maintenance Quotes connects you with Texas professionals who specialize in:</p>
+<p>If you want a clean, healthy yard all year long, Yard Maintenance connects you with Texas professionals who specialize in:</p>
 
 <ul>
 <li>Yard cleanups</li>
@@ -5967,7 +5967,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Yard Cleanup Anywhere in Florida</h2>
 
-<p>Yard Maintenance Quotes connects homeowners with vetted Florida lawn & landscape professionals.</p>`,
+<p>Yard Maintenance connects homeowners with vetted Florida lawn & landscape professionals.</p>`,
   },
   {
     slug: "best-lawn-mowing-schedule-florida",
@@ -6114,7 +6114,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Professional Mowing in Florida</h2>
 
-<p>If you want consistent, clean mowing, Yard Maintenance Quotes connects you with reliable Florida mowing professionals.</p>`,
+<p>If you want consistent, clean mowing, Yard Maintenance connects you with reliable Florida mowing professionals.</p>`,
   },
   {
     slug: "why-leaf-storm-debris-removal-mandatory-florida",
@@ -6318,7 +6318,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Leaf and Storm Debris Removal Services for Your Florida Home</h2>
 
-<p>If you're dealing with heavy debris in Florida — or don't want to spend every weekend cleaning up after storms — Yard Maintenance Quotes can connect you with trusted professionals who handle full-service debris removal and cleanup.</p>`,
+<p>If you're dealing with heavy debris in Florida — or don't want to spend every weekend cleaning up after storms — Yard Maintenance can connect you with trusted professionals who handle full-service debris removal and cleanup.</p>`,
   },
   {
     slug: "most-common-florida-weeds-how-remove",
@@ -6603,7 +6603,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Weed Removal Solutions for Your Florida Home</h2>
 
-<p>If weeds are taking over your yard — or if you want a full seasonal weed control plan — Yard Maintenance Quotes connects you with reliable Florida weed removal professionals.</p>`,
+<p>If weeds are taking over your yard — or if you want a full seasonal weed control plan — Yard Maintenance connects you with reliable Florida weed removal professionals.</p>`,
   },
   {
     slug: "florida-yard-cleanup-checklist-seasons",
@@ -6964,7 +6964,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Seasonal Yard Cleanup Services in Florida</h2>
 
-<p>If you want a clean, healthy yard all year long, Yard Maintenance Quotes connects you with Florida professionals who specialize in:</p>
+<p>If you want a clean, healthy yard all year long, Yard Maintenance connects you with Florida professionals who specialize in:</p>
 
 <ul>
 <li>Yard cleanups</li>
@@ -7239,7 +7239,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Professional Yard Cleanup in Northwest Arkansas</h2>
 
-<p>Yard Maintenance Quotes connects homeowners with trusted local pros in:</p>
+<p>Yard Maintenance connects homeowners with trusted local pros in:</p>
 
 <ul>
 <li>Fayetteville</li>
@@ -7382,7 +7382,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Professional Mowing in Arkansas</h2>
 
-<p>If you want consistent, clean mowing, Yard Maintenance Quotes connects you with reliable Arkansas mowing professionals.</p>`,
+<p>If you want consistent, clean mowing, Yard Maintenance connects you with reliable Arkansas mowing professionals.</p>`,
   },
   {
     slug: "why-leaf-storm-debris-removal-essential-arkansas",
@@ -7590,7 +7590,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Leaf and Storm Debris Removal Services for Your Arkansas Home</h2>
 
-<p>If you're dealing with heavy debris in Arkansas — or don't want to spend every weekend cleaning up after storms — Yard Maintenance Quotes can connect you with trusted professionals who handle full-service debris removal and cleanup.</p>`,
+<p>If you're dealing with heavy debris in Arkansas — or don't want to spend every weekend cleaning up after storms — Yard Maintenance can connect you with trusted professionals who handle full-service debris removal and cleanup.</p>`,
   },
   {
     slug: "most-common-arkansas-weeds-how-remove",
@@ -7862,7 +7862,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Weed Removal Solutions for Your Arkansas Home</h2>
 
-<p>If weeds are taking over your yard — or if you want a full seasonal weed control plan — Yard Maintenance Quotes connects you with reliable Arkansas weed removal professionals.</p>`,
+<p>If weeds are taking over your yard — or if you want a full seasonal weed control plan — Yard Maintenance connects you with reliable Arkansas weed removal professionals.</p>`,
   },
   {
     slug: "arkansas-yard-cleanup-checklist-seasons",
@@ -8194,7 +8194,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Seasonal Yard Cleanup Services in Arkansas</h2>
 
-<p>If you want a clean, healthy yard all year long, Yard Maintenance Quotes connects you with Arkansas professionals who specialize in:</p>
+<p>If you want a clean, healthy yard all year long, Yard Maintenance connects you with Arkansas professionals who specialize in:</p>
 
 <ul>
 <li>Yard cleanups</li>
@@ -8443,7 +8443,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Yard Cleanup Services in Idaho</h2>
 
-<p>Yard Maintenance Quotes connects homeowners with trusted Idaho yard pros across:</p>
+<p>Yard Maintenance connects homeowners with trusted Idaho yard pros across:</p>
 
 <ul>
 <li>Boise</li>
@@ -8620,7 +8620,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Professional Mowing in Idaho</h2>
 
-<p>If you want consistent, clean mowing, Yard Maintenance Quotes connects you with reliable Idaho mowing professionals.</p>`,
+<p>If you want consistent, clean mowing, Yard Maintenance connects you with reliable Idaho mowing professionals.</p>`,
   },
   {
     slug: "why-leaf-storm-debris-removal-matters-idaho",
@@ -8804,7 +8804,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Leaf and Storm Debris Removal Services for Your Idaho Home</h2>
 
-<p>If you're dealing with heavy debris in Idaho — or don't want to spend every weekend cleaning up after storms — Yard Maintenance Quotes can connect you with trusted professionals who handle full-service debris removal and cleanup.</p>`,
+<p>If you're dealing with heavy debris in Idaho — or don't want to spend every weekend cleaning up after storms — Yard Maintenance can connect you with trusted professionals who handle full-service debris removal and cleanup.</p>`,
   },
   {
     slug: "most-common-idaho-weeds-how-remove",
@@ -9063,7 +9063,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Weed Removal Solutions for Your Idaho Home</h2>
 
-<p>If weeds are taking over your yard — or if you want a full seasonal weed control plan — Yard Maintenance Quotes connects you with reliable Idaho weed removal professionals.</p>`,
+<p>If weeds are taking over your yard — or if you want a full seasonal weed control plan — Yard Maintenance connects you with reliable Idaho weed removal professionals.</p>`,
   },
   {
     slug: "idaho-yard-cleanup-checklist-seasons",
@@ -9422,7 +9422,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Seasonal Yard Cleanup Services in Idaho</h2>
 
-<p>If you want a clean, healthy yard all year long, Yard Maintenance Quotes connects you with Idaho professionals who specialize in:</p>
+<p>If you want a clean, healthy yard all year long, Yard Maintenance connects you with Idaho professionals who specialize in:</p>
 
 <ul>
 <li>Yard cleanups</li>
@@ -9729,7 +9729,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Yard Cleanup Services in New Mexico</h2>
 
-<p>Yard Maintenance Quotes connects homeowners with trusted professionals serving:</p>
+<p>Yard Maintenance connects homeowners with trusted professionals serving:</p>
 
 <ul>
 <li>Albuquerque</li>
@@ -9915,7 +9915,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Professional Mowing in New Mexico</h2>
 
-<p>If you want consistent, properly-timed mowing that accounts for New Mexico's unique climate, Yard Maintenance Quotes connects you with reliable New Mexico mowing professionals.</p>`,
+<p>If you want consistent, properly-timed mowing that accounts for New Mexico's unique climate, Yard Maintenance connects you with reliable New Mexico mowing professionals.</p>`,
   },
   {
     slug: "why-leaf-storm-debris-removal-matters-new-mexico",
@@ -10149,7 +10149,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Leaf and Storm Debris Removal Services in New Mexico</h2>
 
-<p>If you're dealing with heavy leaf drops or monsoon debris in New Mexico, Yard Maintenance Quotes can connect you with trusted professionals who handle full-service debris removal and cleanup.</p>`,
+<p>If you're dealing with heavy leaf drops or monsoon debris in New Mexico, Yard Maintenance can connect you with trusted professionals who handle full-service debris removal and cleanup.</p>`,
   },
   {
     slug: "most-common-new-mexico-weeds-how-remove",
@@ -10423,7 +10423,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Weed Removal Solutions for Your New Mexico Home</h2>
 
-<p>If weeds are taking over your yard — or if you want a full seasonal weed control plan for New Mexico's unique climate — Yard Maintenance Quotes connects you with reliable New Mexico weed removal professionals.</p>`,
+<p>If weeds are taking over your yard — or if you want a full seasonal weed control plan for New Mexico's unique climate — Yard Maintenance connects you with reliable New Mexico weed removal professionals.</p>`,
   },
   {
     slug: "new-mexico-yard-cleanup-checklist-seasons",
@@ -10739,7 +10739,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Get Seasonal Yard Cleanup Services in New Mexico</h2>
 
-<p>If you want a clean, healthy yard all year long, Yard Maintenance Quotes connects you with New Mexico professionals who specialize in:</p>
+<p>If you want a clean, healthy yard all year long, Yard Maintenance connects you with New Mexico professionals who specialize in:</p>
 
 <ul>
 <li>Yard cleanups</li>

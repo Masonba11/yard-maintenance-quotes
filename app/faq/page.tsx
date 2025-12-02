@@ -4,7 +4,7 @@ import LeadForm from "@/src/components/LeadForm";
 export const metadata = {
   title: "Frequently Asked Questions",
   description:
-    "Get answers to common questions about Yard Maintenance Quotes, our services, and how the quote process works.",
+    "Get answers to common questions about Yard Maintenance, our services, and how the quote process works.",
 };
 
 export default function FAQPage() {
