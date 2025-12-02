@@ -39,7 +39,7 @@ export async function generateMetadata({
     };
   }
 
-  const title = `Yard Maintenance in ${location.displayName} | Free Quotes`;
+  const title = `Yard Maintenance in ${location.city}, ${location.state} | Free Quotes`;
   const description = `Get fast, free yard maintenance quotes in ${location.displayName}. Connect with pre-screened local professionals for lawn mowing, yard cleanup, and landscaping maintenance.`;
 
   return {
