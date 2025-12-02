@@ -74,7 +74,7 @@ export async function generateMetadata({
     ? primaryLocation.city
     : stateLocations[0].city;
 
-  const title = `Yard Maintenance in ${stateName} | Free Quotes`;
+  const title = `Yard Maintenance ${stateName} | Free Quotes`;
   const description = `Get fast, free yard maintenance quotes in ${stateName}. Connect with pre-screened local professionals in ${displayCity} and cities across ${stateName} for lawn mowing, yard cleanup, and landscaping maintenance.`;
 
   return {

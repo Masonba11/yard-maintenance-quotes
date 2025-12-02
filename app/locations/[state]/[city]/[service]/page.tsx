@@ -73,7 +73,7 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${service.name} in ${location.city}, ${location.state} | Free Quotes`;
+  const title = `${service.name} ${location.city}, ${location.state} | Free Quotes`;
   const description = `Get fast, free ${service.name.toLowerCase()} quotes in ${
     location.displayName
   }. Connect with pre-screened local professionals for ${service.name.toLowerCase()} services.`;
