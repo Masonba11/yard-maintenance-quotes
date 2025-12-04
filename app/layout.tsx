@@ -21,14 +21,38 @@ export const metadata: Metadata = {
     "free quotes",
   ],
   icons: {
-    icon: "/YMQ2.png",
-    apple: "/YMQ2.png",
+    icon: [
+      { url: "/logo.png", sizes: "any" },
+      { url: "/YMQ2.png", sizes: "any" },
+    ],
+    apple: [
+      { url: "/logo.png", sizes: "180x180" },
+      { url: "/YMQ2.png", sizes: "180x180" },
+    ],
+    shortcut: "/logo.png",
   },
   openGraph: {
     title: "Yard Maintenance | Fast, Free Quotes from Local Pros",
     description:
       "Get fast, free yard maintenance quotes from pre-screened local professionals.",
     type: "website",
+    url: "https://yardmaintenancequote.com",
+    siteName: "Yard Maintenance",
+    images: [
+      {
+        url: "https://yardmaintenancequote.com/logo.png",
+        width: 1200,
+        height: 360,
+        alt: "Yard Maintenance Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yard Maintenance | Fast, Free Quotes from Local Pros",
+    description:
+      "Get fast, free yard maintenance quotes from pre-screened local professionals.",
+    images: ["https://yardmaintenancequote.com/logo.png"],
   },
 };
 
@@ -83,6 +107,8 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Yard Maintenance",
               url: "https://yardmaintenancequote.com",
+              logo: "https://yardmaintenancequote.com/logo.png",
+              image: "https://yardmaintenancequote.com/logo.png",
               description:
                 "A lead generation service connecting homeowners with local yard maintenance professionals.",
               sameAs: [],
